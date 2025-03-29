@@ -36,3 +36,5 @@ document.addEventListener("DOMContentLoaded", function () {
     resultado.innerHTML += `<p><strong>Idades maiores ou iguais a ${idadeMinima2}:</strong> ${idadesAcimaDe(idades, idadeMinima2).join(', ') || "Nenhuma"}</p>`;
     resultado.innerHTML += `<p><strong>Média das idades maiores ou iguais a ${idadeMinima2}:</strong> ${mediaIdadesAcimaDe(idades, idadeMinima2).toFixed(2)}</p>`;
 });
+
+//teste de comentário
