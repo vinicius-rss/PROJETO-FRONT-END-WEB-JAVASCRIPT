@@ -1,0 +1,52 @@
+body {
+    background: url('assets/bg-retro.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fffbe6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: #fff;
+    border-bottom: 4px dashed #fffbe6;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.2em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.filme {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fffbe6;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.filme img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.filme h2 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+}
+
+.filme p {
+    font-size: 0.9rem;
+    color: #ffe;
+}
