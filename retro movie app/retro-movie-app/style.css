@@ -1,39 +1,81 @@
 body {
-    background: url('assets/bg-retro.jpg') no-repeat center center fixed;
+    background: url('assets/bg-retro.jpeg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Courier New', Courier, monospace;
     color: #fffbe6;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
 }
 
 header {
-    text-align: center;
+    width: 100%;
     padding: 20px;
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: rgba(255, 0, 0, 0.7);
     color: #fff;
     border-bottom: 4px dashed #fffbe6;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-family: 'Monoton', cursive;
+    font-size: 3rem;
     margin-bottom: 0.2em;
+    color: #ffdd57;
+    text-shadow: 2px 2px 0 #000;
 }
 
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
     gap: 20px;
     padding: 30px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+}
+
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    opacity: 0.05;
+    z-index: 999;
 }
 
 .filme {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
     border: 2px solid #fffbe6;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    animation: retro-glow 4s infinite alternate;
+}
+
+@keyframes retro-glow {
+    0% {
+        filter: brightness(1) drop-shadow(0 0 2px #f4e285);
+    }
+    100% {
+        filter: brightness(1.2) drop-shadow(0 0 8px #f4e285);
+    }
+}
+
+.filme:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
 .filme img {
@@ -44,9 +86,15 @@ main {
 .filme h2 {
     font-size: 1.2rem;
     margin: 10px 0 5px;
+    color: #ffdd57;
 }
 
 .filme p {
     font-size: 0.9rem;
-    color: #ffe;
+    color: #f8f8f2;
+    margin: 4px 0;
+}
+
+.filme p strong {
+    color: #ff8c8c;
 }

@@ -5,7 +5,7 @@ const url = `https://api.themoviedb.org/3/movie/popular?language=pt-BR&api_key=$
 fetch(url)
   .then(res => res.json())
   .then(data => {
-    const filmes = data.results.slice(0, 10);
+    const filmes = data.results.slice(0, 24);
     filmes.forEach(filme => {
       const card = document.createElement("div");
       card.className = "filme";
