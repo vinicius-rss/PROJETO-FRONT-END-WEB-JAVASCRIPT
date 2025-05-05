@@ -1,5 +1,5 @@
 const filmesContainer = document.getElementById("filmes-container");
-const apiKey = ""; 
+const apiKey = "402cb9136de8b1d45e1b9eda1ff4dcac"; 
 const url = `https://api.themoviedb.org/3/movie/popular?language=pt-BR&api_key=${apiKey}`;
 
 fetch(url)
